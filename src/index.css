@@ -23,7 +23,7 @@
   --font-body:    'DM Sans', sans-serif;
   --font-mono:    monospace;
 
-    --gradient-gold: linear-gradient(135deg, #f5b932, #e8790a);
+  --gradient-gold: linear-gradient(135deg, #f5b932, #e8790a);
   --gradient-glow: radial-gradient(circle, rgba(245,185,50,0.12) 0%, transparent 70%);
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--gradient-glow);
+  background-image: var(--gradient-gold);
   color: #0d0900;
   font-family: var(--font-display);
   font-weight: 700;
@@ -61,4 +61,61 @@ body {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   display: inline-block;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 36px rgba(245,185,50,0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-outline{
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 600;
+  border: 1.5px solid rgba(245,185,50,0.5);
+  cursor: pointer;
+  padding: 13px 30px;
+  border-radius: 99px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: rgba(245,185,50,0.08);
+  border-color: var(--gold);
+  box-shadow: 0 0 20px rgba(245,185,50,0.25);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+}
+.fade-up.visible {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* animations */
+@keyframes float {
+  0%, 100% {transform: translateY(0px);}
+  50% {transform: translateY(-14px);} 
+}
+
+@keyframes glow {
+    0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.9; }
+}
+
+@keyframes spin{
+  to { transform: rotate(360deg);}
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1);   opacity: 0.6; }
+  50%       { transform: scale(1.5); opacity: 0; }
 }

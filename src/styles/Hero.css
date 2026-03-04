@@ -1,0 +1,189 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 5vw 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_orb--top {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 185, 50, 0.12) 0%, transparent 70%);
+    top: -200px;
+    left: -100px;
+    animation: glow 6s ease-in-out infinite;
+}
+
+.hero_orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero_orb--bottom {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(232, 121, 10, 0.08) 0%, transparent 70%);
+    bottom: 0;
+    right: -100px;
+    animation: glow 8s ease-in-out infinite reverse;
+}
+
+.hero_grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(245, 185, 50, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+.hero_content {
+    max-width: 860px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: fadeUp 0.7s ease both;
+}
+.hero_badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    background: var(--gold);
+}
+
+.hero_badge-dot:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulse-ring 2s ease infinite;
+}
+
+.hero_title {
+  font-family: var(--font-mono);
+  font-size: clamp(65px, 8vw, 88px);
+  font-weight: 800;
+  line-height: 1.0;
+  color: #fff;
+  animation: fadeUp 0.7s ease 0.1s both;
+}
+
+.hero_role {
+  margin-top: 16px;
+  margin-bottom: 28px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  animation: fadeUp 0.7s ease 0.2s both;
+}
+.hero_role-coment{
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+.hero_role-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+}
+.hero__role-cursor {
+  color: var(--gold);
+  font-weight: 300;
+  font-size: 22px;
+  transition: opacity 0.1s;
+}
+.hero_bio {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin-bottom: 36px;
+  animation: fadeUp 0.7s ease 0.3s both;
+}
+.hero_actions {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 56px;
+    animation: fadeUp 0.7s ease 0.4s both;
+}
+
+.hero__ring-wrap {
+    position: absolute;
+    right: 8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 6s easy-in-out infinite;
+}
+
+.hero__ring {
+    position: absolute;
+    border-radius: 50%;
+}
+.hero__ring--outer {
+    inset: 0;
+    border: 1.5px solid rgba(245, 185, 50, 0.2);
+}
+.hero__ring--dashed {
+  inset: 20px;
+  border: 1px dashed rgba(245,185,50,0.12);
+  animation: spin 20s linear infinite;
+}
+.hero__ring--inner {
+  inset: 50px;
+  border: 1px solid rgba(232,121,10,0.15);
+  animation: spin 15s linear infinite reverse;
+}
+.hero__badge-circle {
+  width: 180px; height: 180px;
+  background: radial-gradient(circle at 35% 35%, #1a1000, #0d0900);
+  border-radius: 50%;
+  border: 1.5px solid rgba(245,185,50,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 0 60px rgba(245,185,50,0.15);
+}
+.hero__badge-circle-text {
+    font-size: 38px;
+    font-weight: 800;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: var(--font-display);
+} 
+.hero__badge-circle-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(245,185,50,0.6);
+  letter-spacing: 2px;
+}
+
+/* Hide ring on small screens */
+@media (max-width: 900px) {
+  .hero__ring-wrap { display: none; }
+}
