@@ -43,8 +43,18 @@ body {
   font-family: var(--font-display);
   font-weight: 800;
   color: #fff;
-  line-height: 34px;
+   font-size: clamp(28px, 4vw, 42px);
+  line-height: 50px;
   margin-bottom: 20px;
+}
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
 }
 
 .btn-primary {

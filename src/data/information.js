@@ -14,3 +14,20 @@ export const personal = {
     email : "sukshith126@gmail.com",
     phone : "9606715413",
 }
+
+export const TechTags = [
+    "React", "TypeScript", "HTML", "CSS", "Javascript", "woordpress", "shopify", "Elementor"
+]
+
+export const skills = [
+  { name : "React", level: 92, icon: "⚛"},
+  { name : "Java Script", level: 95, icon: "JS"},
+  { name: "TypeScript",   level: 82, icon: "TS" },
+  { name: "CSS / Tailwind", level: 90, icon: "✦" },
+  { name: "Next.js",      level: 78, icon: "▲" },
+  { name: "Node.js",      level: 70, icon: "⬡" },
+  { name: "Figma",        level: 75, icon: "◈" },
+  { name: "Git & GitHub", level: 88, icon: "⌥" },
+]
+
+

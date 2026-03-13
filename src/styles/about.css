@@ -1,0 +1,113 @@
+.about{
+    padding: 100px 5vw;
+    position: relative;
+    z-index: 1;
+}
+.about_inner{
+   width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about__visual {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1);
+
+}
+.about__visual--visible{
+     opacity: 1;
+  transform: translateX(0);
+      display: flex;
+    justify-content: center;
+}
+.about_avatar {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(245,185,50,0.1), rgba(232,121,10,0.05));
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.about_avatar-glow {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: radial-gradient(circle, rgba(245, 185, 50, 0.12), transparent);
+    animation: glow 5s ease infinite;
+    pointer-events: none;
+}
+.about__avatar-initials{
+    font-size: 80px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+    font-family: var(--font-display);
+}
+.about__avatar-tag{
+  position: absolute;
+  bottom: 20px; left: 20px; right: 20px;
+  background: rgba(13,9,0,0.8);
+  border: 1px solid var(--gold-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+.about__avatar-tag-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.about_text {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s,
+              transform 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s;
+}
+
+.about__text--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+p.about__bio {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 16px;
+   color: var(--text-secondary);
+}
+.about_tags {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    margin-top: 8px;
+    font-family: var(--font-mono);
+}
+.about__tag {
+    font-size: 16px;
+    font-family: 'Syne';
+    padding: 6px 20px;
+    border-radius: 99px;
+    background: var(--gold-dim);
+    color: var(--gold);
+    border: 1px solid var(--gold-border);
+}
+.about__resume {
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+}
