@@ -1,5 +1,4 @@
 import React from 'react'
-import {skills} from "../data/information";
 import '../styles/skills.css';
 
 const SkillCard = ({inView, skill, index}) => {

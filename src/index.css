@@ -107,6 +107,28 @@ body {
 }
 
 
+.form-input,
+.form-textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s, background 0.2s;
+}
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgba(245,185,50,0.5);
+  background: rgba(245,185,50,0.03);
+}
+.form-input::placeholder,
+.form-textarea::p laceholder { color: var(--text-muted); }
+.form-textarea { resize: none; }
+
 /* animations */
 @keyframes float {
   0%, 100% {transform: translateY(0px);}

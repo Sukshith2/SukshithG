@@ -3,6 +3,12 @@ import { personal } from '../data/information'
 import  '../styles/Hero.css' 
 
 const Hero = () => {
+
+  // const { text, cursor } = useTypewriter(personal.roles);
+
+  const scrollTo = (id)=>{
+    document.getElementById(id)?.scrollIntoView({behavior:"smooth"})
+  }
   return (
     <section className='hero' id='hero'>
       <div className='hero_orb hero_orb--top'/>
@@ -22,7 +28,7 @@ const Hero = () => {
 
       <div className='hero_role fade_up'>
         <span className='hero_role-coment'>{"//"}</span>
-        <span className='hero_role-text'>{"TEXT"}</span>
+        <span className='hero_role-text'>FRONTEND DEVELOPER</span>
         <span className="hero__role-cursor">|</span>
       </div>
       <p className='hero_bio'>{personal.bio1}</p>

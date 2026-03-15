@@ -17,7 +17,7 @@ const AboutUs = () => {
             </span>
             <div className="about__avatar-tag">
               <span className="about__avatar-tag-text">
-                // crafting the web since 2021
+                // since 2024
               </span>
             </div>
             </div>
