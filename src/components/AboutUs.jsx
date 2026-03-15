@@ -11,7 +11,7 @@ const AboutUs = () => {
     <div ref={ref} className='about_inner'>
        <div className={`about__visual ${inView ? "about__visual--visible" : ""}`}>
         <div className='about_avatar'>
-          <div className='about_avatar-glow'/>
+          <div className='about_avata   r-glow'/>
              <span className="about__avatar-initials text-gold">
               {}
             </span>

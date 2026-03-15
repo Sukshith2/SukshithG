@@ -94,7 +94,6 @@ export const projects = [
   }
 ]
 
-
 export const socials = [
   { label: "GitHub",   href: "https://github.com/Sukshith2  ", icon: "GH" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sukshith-g-ba673b31a/", icon: "in" },

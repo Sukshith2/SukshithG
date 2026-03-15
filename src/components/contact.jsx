@@ -2,25 +2,26 @@ import React, { useState } from 'react'
 import useInView from '../hook/useInView'
 import { socials } from '../data/information';
 import "../styles/contact.css"
+import { sendContact } from '../services/contactApi';
 
 const contact = () => {
     const [ref, inView] = useInView();
     const [form , setForm ] = useState({name:"", email : "", phone: "", message : ""});
-    const [sent, setSent] = useState("false");
+    const [sent, setSent] = useState(false);
 
 
     function handleChnage(e){
-        setForm((prev)=> ({prev, [e.target.name]:e.target.value}))
+        setForm((prev)=> ({...prev, [e.target.name]:e.target.value}))
     }
 
-    function handleSumbit (){
-        if(!form.name || !form.email || !form.phone || !form.message) return 
+    async function handleSumbit (e){
+        e.preventDefault();
+        const res = await sendContact(form);
+        
+        if(res.success){
         setSent(true);
-        setForm({name : "", email : "", phone: "", message : ""});
-        setTimeout(()=> setSent(false), 4000);
-
+        }
     }
-
 
   return (
     <section id='contact' className='contact'>
@@ -31,7 +32,6 @@ const contact = () => {
                 <p className='section-subtitle' style={{margin : "auto 0"}}>
                       Open to freelance, full-time, and collaboration. I reply within 24h.
                 </p>
-
             </div>
             <div className='contact-card'>
                 <div className="conatct-row">
@@ -54,7 +54,7 @@ const contact = () => {
                         <input className='form-textarea'  name="message" rows={5}              placeholder="Tell me about your project..." value={form.message} onChange={handleChnage} />
                     </div>
                     <button className='btn-primary contact-submit' onClick={handleSumbit}>
-                        {sent ? "Send Message →" : "✓ Message Sent!"}
+                        {sent ? "✓ Message Sent! Thankyou..." : "Send Message →"}
                     </button>
                 </div>
 
