@@ -105,8 +105,6 @@ body {
 .fade-up.visible {
   animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-
-
 .form-input,
 .form-textarea {
   background: rgba(255,255,255,0.04);
@@ -149,5 +147,20 @@ body {
 }
 @keyframes pulse-ring {
   0%, 100% { transform: scale(1);   opacity: 0.6; }
-  50%       { transform: scale(1.5); opacity: 0; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (max-width: 990px) {
+  .about__inner {
+    grid-template-columns: unset !important;
+  }
+}
+@media (max-width: 767px) {
+.about__visual--visible{
+      width: 100%;
+}
+.about_inner{
+    display: flex;
+    flex-wrap: wrap;
+}
 }

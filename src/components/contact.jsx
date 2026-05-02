@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import useInView from '../hook/useInView'
 import { socials } from '../data/information';
 import "../styles/contact.css"
+
 import { sendContact } from '../services/contactApi';
 
 const contact = () => {
@@ -9,20 +10,16 @@ const contact = () => {
     const [form , setForm ] = useState({name:"", email : "", phone: "", message : ""});
     const [sent, setSent] = useState(false);
 
-
     function handleChnage(e){
         setForm((prev)=> ({...prev, [e.target.name]:e.target.value}))
     }
-
     async function handleSumbit (e){
         e.preventDefault();
         const res = await sendContact(form);
-        
         if(res.success){
         setSent(true);
         }
     }
-
   return (
     <section id='contact' className='contact'>
         <div  ref= {ref} className={`conatct_inner ${inView ? "contact-inner-visible" : ""}`}>
@@ -83,7 +80,6 @@ const contact = () => {
     </div>
     </div>
     </section>
-
   )
 }
 

@@ -11,19 +11,15 @@ exports.sendMail = async (req, res)=>{
     }
 });
   try {
-
       await transporter.sendMail({
       from: email,
       to: process.env.EMAIL,
       subject: "New Portfolio Contact Message",
       text: `
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-
-Message:
-${message}
-`
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone}
+        Message: ${message} `
     });
     await transporter.sendMail({
       from: process.env.EMAIL,

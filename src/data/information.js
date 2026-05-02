@@ -1,4 +1,4 @@
-import { resume } from "react-dom/server";
+
 
 export const navLinks = ["Home", "About", "Skills", "Projects", "Contacts"];
 
@@ -10,7 +10,7 @@ export const personal = {
     bio1 : "I'm Sukshith G — a frontend developer obsessed with the intersection of design and      engineering. I believe the best interfaces are invisible: intuitive, fast, and delightful.",
     bio2 : "With 2+ years building production React applications, I specialise in component architecture, performant animations, and bringing Figma designs to life with pixel-perfect precision.",
     availability: true,
-    resume: "#",
+    resume: "/SukshithG_CV.pdf",
     email : "sukshith126@gmail.com",
     phone : "9606715413",
 }
@@ -21,7 +21,9 @@ export const TechTags = [
 
 export const skills = [
   { name : "React", level: 52, icon: "⚛"},
+  { name : "WordPress", level: 90, icon: "🌐"},
   { name : "Java Script", level: 60, icon: "JS"},
+  { name : "Shopify", level: 60, icon: "🛍️"},
   { name: "TypeScript",   level: 42, icon: "TS" },
   { name: "HTML",      level: 90, icon: "!" },
   { name: "CSS / Tailwind", level: 90, icon: "✦" },
@@ -43,12 +45,22 @@ export const projects = [
         githubLink: "#"
   },
   {
+    title : "SBCLLC",
+    tag: "Website",
+    Year :"2025",
+    desc : "I have successfully developed WordPress websites through freelance projects, handling design customization, content management, and responsive layouts.",
+    stack : ["WordPress"],
+    accentColor: "#f5b932",
+    liveLink: "https://sbcllc.ae/",
+    githubLink: "#",
+  },
+  {
     title : "ABBS",
     tag: "Landing Page",
     Year :"2024",
     desc : "A responsive PPC landing page developed with HTML, CSS, and JavaScript.",
     stack : ["HTML", "CSS", "JAVASCRIPT"],
-    accentColor: "#e8790a",
+    accentColor: "#f5b932",
     liveLink: "https://www.abbs.edu.in/application/",
     githubLink: "#",
   },
@@ -63,6 +75,16 @@ export const projects = [
     githubLink: "#",
   },
   {
+    title : "SEMNOX",
+    tag: "Website",
+    Year :"2025",
+    desc : "I have successfully developed WordPress websites through projects, content management, and responsive layouts.",
+    stack : ["WordPress"],
+    accentColor: "#c8860a",
+    liveLink: "https://stagingdemo.in/semnox/",
+    githubLink: "#",
+  },
+  {
     title : "TASK TODO",
     tag: "APPLICATION",
     Year :"2025",
@@ -72,26 +94,26 @@ export const projects = [
     liveLink: "#",
     githubLink: "#",
   },
-  {
-    title : "REACT QUIZ",
-    tag: "APPLICATION",
-    Year :"2025",
-    desc : "It's the application of quiz. in this questions and four options in that we need to selelct the answer and also one progressbar like timmer..",
-    stack : ["REACT", "TYPESCRIPT", "CSS"],
-    accentColor: "#f5b932",
-    liveLink: "#",
-    githubLink: "#",
-  },
-  {
-    title : "TIC TAC TOE",
-    tag: "APPLICATION",
-    Year :"2026",
-    desc : "It's the Game Application. its a XOX game there if player got same latter in the line like OOO then that player will won the task",
-    stack : ["REACT", "TYPESCRIPT", "TAILWIND CSS"],
-    accentColor: "#f2b032",
-    liveLink: "#",
-    githubLink: "#",
-  }
+  // {
+  //   title : "REACT QUIZ",
+  //   tag: "APPLICATION",
+  //   Year :"2025",
+  //   desc : "It's the application of quiz. in this questions and four options in that we need to selelct the answer and also one progressbar like timmer..",
+  //   stack : ["REACT", "TYPESCRIPT", "CSS"],
+  //   accentColor: "#f5b932",
+  //   liveLink: "#",
+  //   githubLink: "#",
+  // },
+  // {
+  //   title : "TIC TAC TOE",
+  //   tag: "APPLICATION",
+  //   Year :"2026",
+  //   desc : "It's the Game Application. its a XOX game there if player got same latter in the line like OOO then that player will won the task",
+  //   stack : ["REACT", "TYPESCRIPT", "TAILWIND CSS"],
+  //   accentColor: "#f2b032",
+  //   liveLink: "#",
+  //   githubLink: "#",
+  // }
 ]
 
 export const socials = [

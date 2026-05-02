@@ -7,7 +7,5 @@ export const sendContact = async (fromData) =>{
         } catch (error) {
             console.error("Contact API Error:", error);
     throw error;
-        
-    }
-
+}
 }

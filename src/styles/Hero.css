@@ -42,7 +42,6 @@
 .hero_content {
     max-width: 860px;
     position: relative;
-    z-index: 1;
 }
 
 .hero_badge {
